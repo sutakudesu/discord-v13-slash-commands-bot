@@ -4,7 +4,7 @@ module.exports = {
 		type: 2
 	},
 	
-	run: async (client, interaction) => {
+	run: async (client, m, interaction) => {
 		const member = interaction.guild.members.cache.get(interaction.targetId);
 		await interaction.reply({ content: member.toString(), ephemeral: true });
 	}
